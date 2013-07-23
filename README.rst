@@ -11,10 +11,20 @@ Prepare environment
     apt-get install python-software-properties
     add-apt-repository ppa:developmentseed/mapbox
     apt-get update
-    apt-get install libmapnik2-dev
-    apt-get install python-mapnik2
+    apt-get install libmapnik
+    apt-get install python-mapnik
+    apt-get install python-setuptools
     easy_install pip
     pip install virtualenvwrapper
+    export WORKON_HOME=~/.Envs
+    mkdir -p $WORKON_HOME
+    source /usr/local/bin/virtualenvwrapper.sh
+
+You might have to remove libmapnik-dev and mapnik-utils first::
+
+    apt-get remove libmapnik-dev mapnik-utils
+
+You might want to add the virtualenvwrapper WORKON_HOME environment variable to your .bashrc
 
 Install TileStache
 ------------------
@@ -26,7 +36,7 @@ Install TileStache
    pip install -r requirements.txt
    utils/start_gunicorn.sh
 
-tilestache should be running on 0.0.0.0 on port 9000. TileStache config is stored in conf, mapnik XML styles are stored in conf/styles/
+This assumes you have TileStache config file stored in conf/objecten.cfg. Ttilestache should be running on 0.0.0.0 on port 9000. TileStache config is stored in conf, mapnik XML styles are stored in conf/styles/
 
 TODO
 ----
