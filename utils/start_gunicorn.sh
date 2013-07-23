@@ -5,5 +5,4 @@ BASEDIR=${DIR%/*}
 
 echo $BASEDIR
 
-#$BASEDIR"/bin/gunicorn" -b 0.0.0.0:9000 "TileStache:WSGITileServer('$BASEDIR/conf/tilestache/objecten.cfg')" 
 gunicorn -b 0.0.0.0:9000 "TileStache:WSGITileServer('$BASEDIR/conf/objecten.cfg')" 
