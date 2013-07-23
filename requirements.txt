@@ -1,0 +1,6 @@
+ModestMaps
+PIL
+TileStache
+Werkzeug
+gunicorn
+redis
