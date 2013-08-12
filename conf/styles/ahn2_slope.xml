@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" maximum-extent="-20037508.34,-20037508.34,20037508.34,20037508.34">
+
+<Parameters>
+  <Parameter name="bounds">4.6603,52.4494,4.7798,52.516</Parameter>
+  <Parameter name="center">4.7073,52.4689,13</Parameter>
+  <Parameter name="format">png</Parameter>
+  <Parameter name="minzoom">0</Parameter>
+  <Parameter name="maxzoom">22</Parameter>
+  <Parameter name="name"><![CDATA[Alkmaar AHN2 Slope]]></Parameter>
+</Parameters>
+
+
+<Style name="alkmaarahnsubsetslop" filter-mode="first" >
+  <Rule>
+    <RasterSymbolizer opacity="0.9" />
+  </Rule>
+</Style>
+<Layer name="alkmaarahnsubsetslop"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>alkmaarahnsubsetslop</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/home/arjen/Documents/MapBox/project/alkmaar_ahn2_slope/layers/alkmaarahnsubsetslop.tif]]></Parameter>
+       <Parameter name="type"><![CDATA[gdal]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>

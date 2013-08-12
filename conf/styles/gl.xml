@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" maximum-extent="-20037508.34,-20037508.34,20037508.34,20037508.34">
+
+<Parameters>
+  <Parameter name="bounds">4.71,52.5978,4.7998,52.6803</Parameter>
+  <Parameter name="center">4.7523,52.6413,13</Parameter>
+  <Parameter name="format">png</Parameter>
+  <Parameter name="minzoom">0</Parameter>
+  <Parameter name="maxzoom">22</Parameter>
+  <Parameter name="name"><![CDATA[Alkmaar GL]]></Parameter>
+</Parameters>
+
+
+<Style name="geslotenleidingline" filter-mode="first" >
+  <Rule>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([lei_typ] = '02')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#ca0020" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([lei_typ] = '02')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#ca0020" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([lei_typ] = '01')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#0571b0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([lei_typ] = '01')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#0571b0" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([lei_typ] = '00')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#a6611a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([lei_typ] = '00')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#a6611a" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="3" />
+  </Rule>
+</Style>
+<Layer name="geslotenleidingline"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>geslotenleidingline</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/home/arjen/Documents/MapBox/project/alkmaar_gl/layers/geslotenleidingline/gesloten_leiding_3857.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="geslotenleiding" filter-mode="first" >
+  <Rule>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([lei_typ] = '02')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#ca0020" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([lei_typ] = '02')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#ca0020" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([lei_typ] = '01')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#0571b0" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([lei_typ] = '01')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#0571b0" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([lei_typ] = '00')</Filter>
+    <LineSymbolizer stroke-width="1" stroke="#a6611a" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([lei_typ] = '00')</Filter>
+    <LineSymbolizer stroke-width="3" stroke="#a6611a" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <LineSymbolizer stroke-width="1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <LineSymbolizer stroke-width="3" />
+  </Rule>
+</Style>
+<Layer name="geslotenleiding"
+  srs="+proj=sterea +lat_0=52.15616055555555 +lon_0=5.38763888888889 +k=0.999908 +x_0=155000 +y_0=463000 +ellps=bessel +units=m +towgs84=565.2369,50.0087,465.658,-0.406857330322398,0.350732676542563,-1.8703473836068,4.0812 +no_defs">
+    <StyleName>geslotenleiding</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[objecten_prototype_site_geslotenleiding]]></Parameter>
+       <Parameter name="key_field"><![CDATA[id]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[the_geom]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[dynamic]]></Parameter>
+       <Parameter name="extent"><![CDATA[]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="dbname"><![CDATA[objecten_prototype_site]]></Parameter>
+       <Parameter name="user"><![CDATA[buildout]]></Parameter>
+       <Parameter name="password"><![CDATA[buildout]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>

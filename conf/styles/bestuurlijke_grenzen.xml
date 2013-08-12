@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" maximum-extent="-20037508.34,-20037508.34,20037508.34,20037508.34">
+
+<Parameters>
+  <Parameter name="bounds">-180,-85.05112877980659,180,85.05112877980659</Parameter>
+  <Parameter name="center">0,0,2</Parameter>
+  <Parameter name="format">png</Parameter>
+  <Parameter name="minzoom">0</Parameter>
+  <Parameter name="maxzoom">22</Parameter>
+  <Parameter name="name"><![CDATA[Bestuurlijke grenzen]]></Parameter>
+  <Parameter name="description"><![CDATA[PDOK buurten / wijken / gemeenten]]></Parameter>
+</Parameters>
+
+
+<Style name="cbswijken2012" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke="#969696" stroke-width="1" />
+  </Rule>
+</Style>
+<Layer name="cbswijken2012"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>cbswijken2012</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[cbs_wijken_2012]]></Parameter>
+       <Parameter name="key_field"><![CDATA[gid]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[the_geom]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[3.30793843,50.75036754,7.22749859,53.57642332]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgres]]></Parameter>
+       <Parameter name="dbname"><![CDATA[lizard_nxt]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="cbsbuurten2012" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke="#d9d9d9" stroke-width="0.75" />
+  </Rule>
+</Style>
+<Layer name="cbsbuurten2012"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>cbsbuurten2012</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[cbs_buurten_2012]]></Parameter>
+       <Parameter name="key_field"><![CDATA[gid]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[the_geom]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[3.30793843,50.75036754,7.22749859,53.57642332]]></Parameter>
+       <Parameter name="dbname"><![CDATA[lizard_nxt]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+<Style name="cbsgemeenten2012" filter-mode="first" >
+  <Rule>
+    <LineSymbolizer stroke="#737373" stroke-width="1.2" />
+  </Rule>
+</Style>
+<Layer name="cbsgemeenten2012"
+  srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
+    <StyleName>cbsgemeenten2012</StyleName>
+    <Datasource>
+       <Parameter name="type"><![CDATA[postgis]]></Parameter>
+       <Parameter name="table"><![CDATA[cbs_gemeenten_2012]]></Parameter>
+       <Parameter name="key_field"><![CDATA[gid]]></Parameter>
+       <Parameter name="geometry_field"><![CDATA[the_geom]]></Parameter>
+       <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+       <Parameter name="extent"><![CDATA[3.30793843,50.75036754,7.22749859,53.57642332]]></Parameter>
+       <Parameter name="dbname"><![CDATA[lizard_nxt]]></Parameter>
+       <Parameter name="host"><![CDATA[localhost]]></Parameter>
+       <Parameter name="user"><![CDATA[postgres]]></Parameter>
+       <Parameter name="password"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>

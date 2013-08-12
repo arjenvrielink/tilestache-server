@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" maximum-extent="-20037508.34,-20037508.34,20037508.34,20037508.34">
+
+<Parameters>
+  <Parameter name="bounds">-18.9844,19.3111,46.4063,75.1408</Parameter>
+  <Parameter name="center">4.7241,52.836,9</Parameter>
+  <Parameter name="format">png</Parameter>
+  <Parameter name="minzoom">0</Parameter>
+  <Parameter name="maxzoom">22</Parameter>
+  <Parameter name="name"><![CDATA[Alkmaar VHO Leidinge]]></Parameter>
+</Parameters>
+
+
+<Style name="vhogl-line" filter-mode="first" >
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <LineSymbolizer stroke="#252525" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <LineSymbolizer stroke="#252525" stroke-width="3" />
+  </Rule>
+</Style>
+<Style name="vhogl-glow" filter-mode="first"  image-filters="agg-stack-blur(1,1),agg-stack-blur(1,1),agg-stack-blur(1,1)" >
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <LineSymbolizer stroke="#525252" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>1500</MaxScaleDenominator>
+    <LineSymbolizer stroke="#525252" stroke-width="3" />
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+  </Rule>
+</Style>
+<Style name="vhogl" filter-mode="first" >
+  <Rule>
+    <MinScaleDenominator>2500</MinScaleDenominator>
+    <MarkersSymbolizer marker-type="arrow" placement="line" stroke="#252525" fill="#252525" />
+    <LineSymbolizer stroke="#00000000" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>2500</MaxScaleDenominator>
+    <MarkersSymbolizer marker-type="arrow" placement="line" stroke="#252525" fill="#252525" />
+  </Rule>
+</Style>
+<Layer name="vhogl"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>vhogl</StyleName>
+    <StyleName>vhogl-glow</StyleName>
+    <StyleName>vhogl-line</StyleName>
+    <Datasource>
+       <Parameter name="file"><![CDATA[/home/arjen/Documents/MapBox/project/alkmaar_leidingen/layers/vhogl/vho_gl.shp]]></Parameter>
+       <Parameter name="type"><![CDATA[shape]]></Parameter>
+    </Datasource>
+  </Layer>
+
+</Map>
